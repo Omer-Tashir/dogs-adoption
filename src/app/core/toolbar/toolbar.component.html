@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <ng-container *ngIf="!isLoading">
+    <div *ngIf="title && title!='load'" class="title-bar" [@fadeInOnEnter] [@fadeOutOnLeave]>
+      <div class="title">
+        <h1>{{ title }}</h1>
+      </div>
+
+      <div class="home" [routerLink]="'/home'">
+        <img src="assets/logo.png" alt="Home" height="32" />
+      </div>
+    </div>
+
+    <div *ngIf="!title" class="navbar" [@fadeInOnEnter] [@fadeOutOnLeave]>
+      <img class="logo" src="assets/logo.png" [@fadeInOnEnter] />
+      <div class="login">
+        <ng-container *ngIf="isLoading == false">
+          <ng-container *ngIf="displayName != undefined">
+            <span>היי {{ displayName }}</span> |
+            <span class="logout" (click)="logout()">התנתק</span>
+          </ng-container>
+
+          <ng-container *ngIf="displayName == undefined">
+            <mat-icon>account_circle</mat-icon>
+            <a class="nav-link" [routerLink]="'/login'">התחברות למערכת</a>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <div class="navbar-links" [@fadeInOnEnter]>
+        <ul>
+          <li *ngIf="isAdmin">
+            <a [routerLink]="'/admin'">מסך ניהול</a>
+          </li>
+          <li *ngIf="!isAdmin && isVolunteer">
+            <a [routerLink]="'/volunteer-admin-panel'">מסך ניהול</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <img src="assets/twitter.png" alt="Twitter" height="50" />
+        <img src="assets/instagram.png" alt="Instagram" width="55" height="50" />
+        <img src="assets/facebook.png" alt="Facebook" height="55" />
+      </div>
+    </div>
+  </ng-container>
+</mat-toolbar>

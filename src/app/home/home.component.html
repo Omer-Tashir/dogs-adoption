@@ -1,0 +1,46 @@
+<app-toolbar [auth]="auth"></app-toolbar>
+
+<section class="background" [@fadeInOnEnter] [@fadeOutOnLeave]>
+  <div class="background-container dogs-1"></div>
+</section>
+
+<section class="actions" [@fadeInOnEnter] [@fadeOutOnLeave]>
+  <div class="actions-container">
+    <div class="action" [@jackInTheBoxOnEnter]>
+      <button class="top-btn" [routerLink]="'/volunteer'" mat-button>
+        אני רוצה לאפות
+      </button>
+      <p class="action-text">
+        אנו מזמינים אתכם לנצל את יכולות האפיה שלכם ולהנעים את זמנם של אנשים
+        שישמחו לפגוש אתכם
+      </p>
+      <button class="bottom-btn" mat-icon-button color="warn">
+        <mat-icon color="warn">favorite</mat-icon>
+      </button>
+    </div>
+
+    <div class="action" [@jackInTheBoxOnEnter]>
+      <button class="top-btn" [routerLink]="'/refer-a-needy'" mat-button>
+        אני רוצה להוסיף אדם למאגר
+      </button>
+      <p class="action-text">
+        מכירים מישהו שזקוק לשיחה טובה עם עוגה טעימה בצד? השאירו את פרטיו פה
+      </p>
+      <button class="bottom-btn" mat-icon-button color="warn">
+        <mat-icon color="warn">favorite</mat-icon>
+      </button>
+    </div>
+
+    <div class="action" [@jackInTheBoxOnEnter]>
+      <button class="top-btn" mat-button [routerLink]="'/join-us'">
+        אני רוצה להיות חלק מצוות ההנהלה
+      </button>
+      <p class="action-text">
+        אנו תמיד זקוקים לידיים נוספות שיעזרו לנו לקדם את פעילות העמותה
+      </p>
+      <button class="bottom-btn" mat-icon-button color="warn">
+        <mat-icon color="warn">favorite</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>

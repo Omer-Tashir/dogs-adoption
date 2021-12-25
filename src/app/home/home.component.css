@@ -1,0 +1,73 @@
+.background-container,
+.background-container:before {
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+
+.background-container:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.background-container img,
+.background-container pre {
+  position: relative;
+  z-index: 2;
+}
+
+.background-container img {
+  padding: 75px 75px 10px 0;
+  height: 200px;
+}
+
+.background-container pre {
+  padding-right: 75px;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+.actions {
+      width: 100%;
+    position: absolute;
+    top: 64px;
+    z-index: 1;
+}
+
+.actions .actions-container {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.actions .actions-container .action {
+  height: 175px;
+  display: grid;
+  grid-template-rows: 75px auto 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  margin-bottom: 50px;
+}
+
+.actions .actions-container .action .top-btn {
+  font-size: 16px;
+}
+
+.actions .actions-container .action .bottom-btn {
+  margin: auto;
+}
+
+.actions .actions-container .action .action-text {
+  font-size: 14px;
+}
